@@ -1,0 +1,11 @@
+footer {
+	border: 2px solid yellow;
+	padding: 10px;
+}
+ul.footer {
+	width: 150px;
+	display: inline;
+	margin: 0px;
+	padding: 10px;
+	border: 2px solid blue;
+}
