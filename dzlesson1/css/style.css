@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 
 }
+body {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
 header, nav, main, footer{
 	border: 1px solid red;
 	margin:19px;
@@ -47,8 +52,15 @@ footer {
 	width: 306px;
 	height: 57px;
 	margin-bottom: 20px;
-	margin: 28.5px 252.5px;
+	margin: 28.5px 327px;
 }
 .footer li {
 	margin: 0px 19px 24px;
+}
+h1 {
+	text-align: center;
+}
+.text {
+	margin: 21px 68px 146px 104px;
+	font-size: 14pt;
 }
