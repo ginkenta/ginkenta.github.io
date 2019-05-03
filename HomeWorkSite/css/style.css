@@ -51,18 +51,25 @@ img{
 .firstLinkColor a{color: #00e0d0;}
 
 .headerContent__main{
+	width: 800px;
+	margin: 0 auto;
+	overflow: hidden; }
+
+.headerSlider {
+	width: 3920px; 
 	display: flex;
-	justify-content: center; }
+	position: relative;
+	left: 0;
+	transition-duration: .5s; }
+
 .sliderInformation{ 
 	width: 800px;
 	height: 240px;
-	/*background-color: white*/;
 	text-align: center;
 	padding: 80px 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
- }
+	justify-content: space-between;}
 h1 {
 	font-size: 35px;
 	font-family: serif;
@@ -86,8 +93,25 @@ h1 {
 	font-size: 12px; }
 
 .headerContent__footer{  }
-input {
-	margin: 16px 0;
-    display: flex;
-    cursor: pointer;
-}
+
+#sliderButton__Left, #sliderButton__Right {
+	background-color: transparent;
+	border: 0;
+	font-size: 30px;
+	color: cyan;
+	opacity: .5;
+	cursor: pointer;}
+
+.sliderButton, .sliderPoint{ 
+	display: flex;
+	justify-content: center;
+	align-items: center; }
+.sliderPoint {margin: 0 20px;}
+.sliderPoint::first-child{background-color: 'cyan';}
+.sliderPoint__cirkle {
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	border-radius: 50%;
+	border: .5px solid cyan; }
+
