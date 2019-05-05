@@ -10,15 +10,17 @@ img{
 .smallTextFamily { 
 	font-size: 15px;
 	font-family: sans-serif; }
+.forBackgroundImg {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; }
 
 .headerMainBlock{
-	width: 100%;
 	height: 627px;
-	background-image:url(../image/header.png);
-	background-repeat: no-repeat;
-	background-position: center; }
+	background-image:url(../image/header.png); }
 
-.headerContent{ }
+.headerContent{  }
 .headerContent__head{
 	display: flex;
 	justify-content: space-between;
@@ -75,9 +77,14 @@ img{
 	flex-direction: column;
 	justify-content: space-between;}
 h1 {
+	padding-bottom: 20px;
 	font-size: 30pt;
 	font-family: serif;
 	color: white; }
+.titleDownline {
+	width: 50px;
+	color: white;
+	margin: 0 auto; }
 .sliderInformation__text{ 
 	padding: 0 5px;
 	color: white; }
@@ -127,3 +134,23 @@ h1 {
 	justify-content: space-between; }
 
 .textOpacity { opacity: .7; }
+
+.videoStory { 
+	background-image: url(../image/bgforvideo.png);
+	height: 400px;
+	display: flex;
+	align-items: center; }
+.videoStory__content { width: 15%; }
+
+.blockVideo {  }
+.blockVideo__videoContent { margin: 15%; }
+
+.videoContent__button { 
+	width: 100%;
+	height: auto; }
+
+.blockVideo p { 
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bolder; }
