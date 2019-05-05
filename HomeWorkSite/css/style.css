@@ -76,19 +76,23 @@ img{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;}
+
 h1 {
 	padding-bottom: 20px;
 	font-size: 30pt;
 	font-family: serif;
 	color: white; }
+
 .titleDownline {
 	width: 50px;
 	color: white;
 	margin: 0 auto; }
+
 .sliderInformation__text{ 
 	padding: 0 5px;
 	color: white; }
 .sliderInformation::last-child{margin: 0 auto;}
+
 .buttonLearnMore {
 	padding: 10px;
 	color: #02d7c9;
@@ -137,13 +141,13 @@ h1 {
 
 .videoStory { 
 	background-image: url(../image/bgforvideo.png);
-	height: 400px;
+	height: 600px;
 	display: flex;
 	align-items: center; }
-.videoStory__content { width: 15%; }
+.videoStory__content { width: 20%; }
 
 .blockVideo {  }
-.blockVideo__videoContent { margin: 15%; }
+.blockVideo__videoContent { margin: 15% 23%; }
 
 .videoContent__button { 
 	width: 100%;
@@ -153,4 +157,54 @@ h1 {
 	text-align: center;
 	color: white;
 	font-family: sans-serif;
-	font-weight: bolder; }
+	font-weight: bolder; } 
+
+.blockExpertise { height: 627px; }
+.blockExpertise__content { padding: 50px; }
+
+.exspertiseTitle {	text-align: center; }
+.exspertiseTitle p{ padding: 10px 0 20px; }
+
+.exspertiseContent { 
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; }
+.exspertiseContent__block { 
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	text-align: center; 
+	padding: 30px; 
+	flex-basis: 26%;
+	border-right: 1px solid rgba(0,0,0,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.4); }
+
+.noneBlockRight { border-right-style: none; }
+.noneBlockBottm { border-bottom-style: none; }
+
+.exspertiseContent__block h4 {
+	font-size: 10pt;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 15px 0; }
+
+.miniImg {  }
+.miniImg img{ 
+	height: 100%;
+	width: auto; }
+
+.blockTeam {
+	height: 627px;
+	background-color: black;
+	color: white; }
+.blockTeam__content {  }
+
+.titleTeam {  }
+
+.photoTeam {  }
+.photoTeam__person {  }
+
+.personPhoto {  }
+
+.butttonTeam {  }
