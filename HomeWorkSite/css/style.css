@@ -17,7 +17,7 @@ img{
 	background-size: cover; }
 
 .headerMainBlock{
-	height: 627px;
+	min-height: 627px;
 	background-image:url(../image/header.png); }
 
 .headerContent{  }
@@ -69,13 +69,14 @@ img{
 	transition-duration: .5s; }
 
 .sliderInformation{ 
-	width: 800px;
-	height: 240px;
+	max-width: 800px;
+	min-height: 240px;
 	text-align: center;
 	padding: 80px 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;}
+	justify-content: space-between;
+	word-wrap: wrap; }
 
 h1 {
 	padding-bottom: 20px;
@@ -127,6 +128,7 @@ h1 {
 	border-radius: 50%;
 	border: .5px solid cyan; }
 
+.blockAbout { min-height: 400px; }
 .blockAbout__content { display: flex; }
 .blockAbout__bigLogo{ margin: 70px 80px; }
 .bigLogo__size { width: 230px; }
@@ -141,7 +143,7 @@ h1 {
 
 .videoStory { 
 	background-image: url(../image/bgforvideo.png);
-	height: 600px;
+	min-height: 600px;
 	display: flex;
 	align-items: center; }
 .videoStory__content { width: 20%; }
@@ -159,7 +161,7 @@ h1 {
 	font-family: sans-serif;
 	font-weight: bolder; } 
 
-.blockExpertise { height: 627px; }
+.blockExpertise { min-height: 627px; }
 .blockExpertise__content { padding: 50px; }
 
 .exspertiseTitle {	text-align: center; }
@@ -195,16 +197,58 @@ h1 {
 	width: auto; }
 
 .blockTeam {
-	height: 627px;
-	background-color: black;
-	color: white; }
-.blockTeam__content {  }
+	min-height: 645px;
+	background-image: url(../image/blockTeamBG.png);
+	color: white;
+	position: relative; }
+.blockTeam__content { 
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 2; }
+.blockTeam__dimming {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #301447;
+	opacity: .8; }
 
-.titleTeam {  }
+.titleTeam { 
+	text-align: center;
+	padding: 40px; }
+.titleTeam p { padding: 10px 0 20px; }
 
-.photoTeam {  }
-.photoTeam__person {  }
+.photoTeam { 
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: sans-serif; }
+.photoTeam__person { 
+	margin: 10px;
+	border: 1px solid gray; }
+.photoTeam__person p { 
+	font-size: 12px;
+	padding: 5px; }
 
-.personPhoto {  }
+.personPhoto { width: 210px; }
 
-.butttonTeam {  }
+.personInf::first-line { font-weight: bolder; }
+.personInf { 
+	padding: 10px;
+	text-align: center; }
+
+.butttonTeam {
+	min-height: 27%; 
+	display: flex;
+	justify-content: center;
+	align-items: center; }
+.butttonTeam__inform { 
+	width: 35%;
+	min-height: 95px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap; }
+.butttonTeam__inform	
