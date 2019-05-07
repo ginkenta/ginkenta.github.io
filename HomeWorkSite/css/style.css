@@ -5,7 +5,7 @@ img{
 	width: 100%; 
 	height: auto;}
 .inCentre {
-	max-width: 960px;
+	max-width: 85%;
 	margin: 0 auto; }
 .smallTextFamily { 
 	font-size: 15px;
@@ -20,11 +20,11 @@ img{
 	min-height: 627px;
 	background-image:url(../image/header.png); }
 
-.headerContent{  }
+.headerContent{ padding-bottom: 80px;  }
 .headerContent__head{
 	display: flex;
 	justify-content: space-between;
-	padding: 15px;}
+	padding: 15px 5%;}
 
 .logo{ display: flex; }
 .logo__img{
@@ -101,7 +101,8 @@ h1 {
 	border: 1px solid #02d7c9;
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 12px; }
+	font-size: 12px;
+	display: inline-flex; }
 
 .headerContent__footer{  }
 
@@ -128,13 +129,16 @@ h1 {
 	border-radius: 50%;
 	border: .5px solid cyan; }
 
-.blockAbout { min-height: 400px; }
-.blockAbout__content { display: flex; }
-.blockAbout__bigLogo{ margin: 70px 80px; }
+.blockAbout { /*min-height: 400px; */}
+.blockAbout__content { 
+	display: flex;
+	min-height: 400px;
+	/*padding: 3% 15%; */}
+.blockAbout__bigLogo{ margin: auto 0 auto 8%; }
 .bigLogo__size { width: 230px; }
 
 .blockAbout__inform { 
-	margin: 70px 0;
+	margin: 8% 5%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between; }
@@ -221,7 +225,6 @@ h1 {
 .photoTeam { 
 	display: flex;
 	width: 100%;
-	flex-wrap: wrap;
 	justify-content: center;
 	font-family: sans-serif; }
 .photoTeam__person { 
@@ -250,5 +253,34 @@ h1 {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	flex-wrap: wrap; }
+	white-space: nowrap;
+	/*word-wrap: normal;*/ }
 .butttonTeam__inform	
+
+.blockWorks { }
+.blockWorks__content {  }
+.blockWorks__header { 
+	display: flex;
+	justify-content: space-between;
+	padding: 5% 8%; }
+.blockWorks__main { 
+	height: 350px;
+	background-color: blue; }
+.blockWorks__footer { 
+	padding: 5% 0;
+	text-align: center; }
+
+.blockPeoplesay { 
+	background-image: url(../image/bgpeoplesay.jpg); }
+.blockPeoplesay__content { 
+	max-width: 800px;
+	text-align: center; }
+.blockPeoplesay__header { 
+	font-size: 60px; }
+.blockPeoplesay__main {  }
+
+.peopleSay {  }
+
+.whomSaid {  }
+
+.blockPeoplesay__footer {  }
