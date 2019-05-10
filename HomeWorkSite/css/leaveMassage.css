@@ -1,0 +1,38 @@
+.leaveMassage {  }
+.leaveMassage__content { 
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 10px; }
+
+.massageForm { 
+	width: 40%; }
+.massageForm__form { 
+	display: flex;
+	flex-direction: column;
+	/*max-width: 49%;*/ }
+.marginLabel{
+	margin: 5px 5px 25px;
+}
+.massageForm__form textarea {
+	height: 200px;
+}
+
+.happyClients { 
+	width: 48%; }
+.happyClients__lables { 
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 409px;
+	justify-content: space-between; }
+.happyClients__lables img { height: 100%; width: auto; }
+
+.paddmar15 { padding: 15px; margin: 5px; }
+
+.label1 { height: inherit;  }
+/*.label1 img { height: 100%; width: auto; }*/
+.label2 {  }
+.label3 {  }
+.label4 {  }
+.label5 {  }
+.label6 {  }

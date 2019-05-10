@@ -1,0 +1,19 @@
+.videoStory { 
+	background-image: url(../image/bgforvideo.png);
+	min-height: 600px;
+	display: flex;
+	align-items: center; }
+.videoStory__content { width: 20%; }
+
+.blockVideo {  }
+.blockVideo__videoContent { margin: 15% 23%; }
+
+.videoContent__button { 
+	width: 100%;
+	height: auto; }
+
+.blockVideo p { 
+	text-align: center;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bolder; } 

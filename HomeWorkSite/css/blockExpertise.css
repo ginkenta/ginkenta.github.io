@@ -1,0 +1,34 @@
+.blockExpertise { min-height: 627px; }
+.blockExpertise__content { padding: 50px; }
+
+.exspertiseTitle {	text-align: center; }
+.exspertiseTitle p{ padding: 10px 0 20px; }
+
+.exspertiseContent { 
+	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; }
+.exspertiseContent__block { 
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+	text-align: center; 
+	padding: 30px; 
+	flex-basis: 26%;
+	border-right: 1px solid rgba(0,0,0,0.4);
+	border-bottom: 1px solid rgba(0,0,0,0.4); }
+
+.noneBlockRight { border-right-style: none; }
+.noneBlockBottm { border-bottom-style: none; }
+
+.exspertiseContent__block h4 {
+	font-size: 10pt;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 15px 0; }
+
+.miniImg {  }
+.miniImg img{ 
+	height: 100%;
+	width: auto; }

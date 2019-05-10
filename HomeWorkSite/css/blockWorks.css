@@ -1,0 +1,12 @@
+.blockWorks { }
+.blockWorks__content {  }
+.blockWorks__header { 
+	display: flex;
+	justify-content: space-between;
+	padding: 5% 8%; }
+.blockWorks__main { 
+	height: 350px;
+	background-color: blue; }
+.blockWorks__footer { 
+	padding: 5% 0;
+	text-align: center; }

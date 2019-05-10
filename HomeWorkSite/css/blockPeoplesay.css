@@ -1,0 +1,65 @@
+.blockPeoplesay { 
+	background-image: url(../image/bgpeoplesay.jpg);
+	min-height: 627px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center; }
+.blockPeoplesay__content { 
+	text-align: center;
+	color: rgba(255,255,255,.9);
+	position: absolute;
+
+	z-index: 2; }
+.blockPeoplesay__header { font-size: 60px; }
+.blockPeoplesay__main { 
+	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px 100px 90px; }
+
+.peopleSay {  }
+
+.whomSaid { 
+	min-width: 150px;
+	height: 50px;
+	margin: 0 auto; }
+.whomSaid::first-line { font-weight: bold; }
+
+.blockPeoplesay__footer { 
+	max-width: 300px;
+	/*height: 50px;*/
+	/*background-color: white;*/
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; }
+
+.button-sliderSay {
+	background-color: transparent;
+	border: 0;
+	font-size: 30px;
+	color: cyan;
+	opacity: .5;
+	cursor: pointer;
+	font-size: 35px; }
+
+.peopleSay_whom { 
+	display: flex;
+	justify-content: center;
+	margin: 0 10px;
+	border-radius: 50%; }
+.peopleSay__photo {
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	 background-size: contain; }
+
+.photo1 { background-image: url(../image/1.png); }
+.photo2 { background-image: url(../image/2.png); }
+.photo3 { background-image: url(../image/3.png); }
+.photo4 { background-image: url(../image/4.png); }
+.photo5 { background-image: url(../image/5.png); }
