@@ -1,0 +1,93 @@
+.footerMainBlock {background-image: url(../image/footerBlock.png);}
+
+.footerContent {
+	color: #ebeaed;
+	padding: 70px 0;	}
+
+.footerContent__content {
+	display: flex;
+	justify-content: space-between;}
+.footerContent__content h3 { margin: 20px 10px; }
+.footerContent__abt { width: 30%; }
+
+.footerContent__address {width: 30%;padding: 5px;}
+
+.ourStudio { }
+.ourStudio img { width: 100%;  height: auto; }
+.ourStudio p { padding: 5px; }
+.ourStudio__address { display: flex; }
+.ourStudio__phone { display: flex; align-items: center; }
+.ourStudio__address-img { width: 30px; padding: 10px; }
+.ourStudio__phone-img { padding: 10px; }
+
+.footerContent__contact {
+	width: 30%;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;	}
+
+.subscribeNews { 
+	margin-left: 10px; 
+	display: flex;  }
+.subscribeNews__form { 
+	margin-right: 10px;
+	padding-left: 10px;
+	background: none; 
+	border: 1px solid #9d97b0;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3vw;
+	width: 70%; }
+
+.subscribeNews__button { 
+	width: 60px;
+	height: 40px;
+	background-color: rgba(255,255,255,.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer; }
+
+.subscribeNews__button img {
+	width: unset;
+	height: unset; }
+
+.contactInternet { 
+	padding-left: 5px;
+	margin-top: auto; }
+.contactInternet__img {
+	display: flex;
+	list-style: none;	}
+.contactInternet__facebook { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+.contactInternet__twiter { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+.contactInternet__bibi { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+.contactInternet__instagram { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+.contactInternet__google { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+.contactInternet__youtube { 
+	width: 37px;
+	height: 37px;
+	padding: 5px; }
+
+.footerContent__footer {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;	}
+.footerContent__list {
+	list-style: none;
+	display: flex;}
+.footerContent__list li { padding-right: 25px; }

@@ -9,7 +9,6 @@
 	text-align: center;
 	color: rgba(255,255,255,.9);
 	position: absolute;
-
 	z-index: 2; }
 .blockPeoplesay__header { font-size: 60px; }
 .blockPeoplesay__main { 
@@ -24,7 +23,8 @@
 .whomSaid { 
 	min-width: 150px;
 	height: 50px;
-	margin: 0 auto; }
+	margin: 0 auto;
+	/*padding: 30px;*/ }
 .whomSaid::first-line { font-weight: bold; }
 
 .blockPeoplesay__footer { 

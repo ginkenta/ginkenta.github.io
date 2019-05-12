@@ -3,10 +3,22 @@
 .blockWorks__header { 
 	display: flex;
 	justify-content: space-between;
-	padding: 5% 8%; }
+	padding: 5% 8%;
+	max-width: 60%;
+	margin: 0 auto; }
 .blockWorks__main { 
-	height: 350px;
-	background-color: blue; }
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	 }
+.blockWorks__main div {
+	flex-basis: 16.66%;
+	border: 1px solid gray;
+	box-sizing: border-box; }
+.blockWorks__main img {
+	width: 100%;
+	height: 100%;
+}
 .blockWorks__footer { 
 	padding: 5% 0;
 	text-align: center; }

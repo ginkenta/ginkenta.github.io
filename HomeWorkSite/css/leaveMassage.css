@@ -15,6 +15,7 @@
 }
 .massageForm__form textarea {
 	height: 200px;
+	resize: none;
 }
 
 .happyClients { 
@@ -27,12 +28,28 @@
 	justify-content: space-between; }
 .happyClients__lables img { height: 100%; width: auto; }
 
-.paddmar15 { padding: 15px; margin: 5px; }
+.paddmar15 { 
+	padding: 15px;
+	margin: 5px;
+	border: 1px solid #e5e5e5;
+	font-family: sans-serif; }
 
-.label1 { height: inherit;  }
+.massageForm__submit {
+	padding: 10px;
+	color: #00e0d0;
+	background: none;
+    border: 1px solid #02d7c9;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+	width: 120px;
+	margin: 5px;
+	cursor: pointer;	}
+
+.label1 { height: inherit; width: 150px;  }
 /*.label1 img { height: 100%; width: auto; }*/
-.label2 {  }
-.label3 {  }
-.label4 {  }
-.label5 {  }
-.label6 {  }
+.label2 { width: 150px; }
+.label3 { width: 150px; }
+.label4 { width: 150px; }
+.label5 { width: 150px; }
+.label6 { width: 150px; }
