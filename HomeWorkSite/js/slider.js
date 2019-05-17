@@ -14,40 +14,40 @@ window.onload = function() {
 	firstDot.style.backgroundColor = 'cyan';
 
  	slideMoveRight.onclick = function () {
-		left = left - 800;
- 		sliderMove.style.left = left+'px';
+		left = left - 100;
+ 		sliderMove.style.left = left+'%';
 
- 		if (left == -3200) {
-			sliderMove.style.left = 0+'px';
+ 		if (left == -400) {
+			sliderMove.style.left = 0+'%';
 			left = 0;
 			fourthDot.style.background = 'none';
 			firstDot.style.backgroundColor = 'cyan';
 		}		
-		if (left == -800) {
+		if (left == -100) {
 			firstDot.style.background = 'none';
 			secondDot.style.backgroundColor = 'cyan';
-		} if (left == -1600) {
+		} if (left == -200) {
 			secondDot.style.background = 'none';
 			thirdDot.style.backgroundColor = 'cyan';
-		} if (left == -2400) {
+		} if (left == -300) {
 			thirdDot.style.background = 'none';
 			fourthDot.style.backgroundColor = 'cyan';
 		} 
 	};	
 
 	slideMoveLeft.onclick = function () {
-		left = left + 800;
- 		sliderMove.style.left = left+'px';
+		left = left + 100;
+ 		sliderMove.style.left = left+'%';
 
- 		if (left == 800) {
-			sliderMove.style.left = -2400+'px';
-			left = -2400;
+ 		if (left == 100) {
+			sliderMove.style.left = -300+'%';
+			left = -300;
 			firstDot.style.background = 'none';
 			fourthDot.style.backgroundColor = 'cyan';
-		} if (left == -1600) {
+		} if (left == -200) {
 			fourthDot.style.background = 'none';
 			thirdDot.style.backgroundColor = 'cyan';
-		} if (left == -800) {
+		} if (left == -100) {
 			thirdDot.style.background = 'none';
 			secondDot.style.backgroundColor = 'cyan';
 		} if (left == -0) {

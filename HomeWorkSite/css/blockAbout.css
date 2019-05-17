@@ -14,3 +14,25 @@
 	justify-content: space-between; }
 
 .textOpacity { opacity: .7; }
+
+@media screen and (max-width: 990px) {
+	.blockAbout__content {
+		display: block;
+		margin: 0 auto;
+	}
+	.blockAbout__bigLogo {
+		display: flex;
+		margin: 40px 0;
+		justify-content: center;
+	}
+	.blockAbout__inform {
+		text-align: center;
+	    margin: 3% 5%;
+	}
+	.blockAbout__inform h2 {
+		margin-bottom: 20px;
+	}
+	.margin2 {
+		margin: 6% 0;
+	}
+}

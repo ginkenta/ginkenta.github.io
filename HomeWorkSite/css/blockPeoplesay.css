@@ -16,14 +16,14 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 20px 100px 90px; }
+	padding: 20px 100px 2%; }
 
 .peopleSay {  }
 
 .whomSaid { 
 	min-width: 150px;
 	height: 50px;
-	margin: 0 auto;
+	margin: 6% auto;
 	/*padding: 30px;*/ }
 .whomSaid::first-line { font-weight: bold; }
 

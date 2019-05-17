@@ -19,7 +19,8 @@
 }
 
 .happyClients { 
-	width: 48%; }
+	width: 48%;
+	margin-left: 10%; }
 .happyClients__lables { 
 	display: flex;
 	flex-direction: column;
@@ -46,10 +47,30 @@
 	margin: 5px;
 	cursor: pointer;	}
 
-.label1 { height: inherit; width: 150px;  }
+.label1 { height: inherit; width: 53%;  }
 /*.label1 img { height: 100%; width: auto; }*/
 .label2 { width: 150px; }
 .label3 { width: 150px; }
 .label4 { width: 150px; }
 .label5 { width: 150px; }
 .label6 { width: 150px; }
+
+@media screen and (max-width: 900px) {
+	.leaveMassage__content { 
+		display: block; 
+	}
+	.marginLabel {
+		text-align: center;
+	}
+	.massageForm { 
+		width: 66%;
+		margin: 0 auto;
+	}
+	.happyClients { 
+		width: 70%;
+		margin: 6% auto;
+	}
+	.happyClients__lables {
+		height: 480px;
+	}
+}

@@ -17,3 +17,9 @@
 	color: white;
 	font-family: sans-serif;
 	font-weight: bolder; } 
+
+@media screen and (max-width: 900px) {
+	.videoStory__content {
+    	width: 30%;
+	}
+}

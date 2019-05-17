@@ -32,3 +32,20 @@
 .miniImg img{ 
 	height: 100%;
 	width: auto; }
+
+@media screen and (max-width: 989px) {
+	.exspertiseContent__block:nth-child(odd) {
+		border-bottom: 1px solid gray;
+		border-right: 1px solid gray;
+	}
+	.exspertiseContent__block:nth-child(even) {
+		border-bottom: 1px solid gray;
+		border-right: none;
+	}
+	.exspertiseContent__block:nth-last-child(2) {
+		border-bottom: none;
+	}
+	.exspertiseContent__block:last-child {
+		border-bottom: none;
+	}
+}

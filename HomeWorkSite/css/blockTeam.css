@@ -55,3 +55,17 @@
 	white-space: nowrap;
 	/*word-wrap: normal;*/ }
 .butttonTeam__inform {  }	
+
+@media screen and (max-width: 940px) {
+	.photoTeam {
+		flex-wrap: wrap;
+		width: 88%;
+    	margin: 0 auto;
+	}
+	.blockTeam {
+		min-height: 900px;
+	}
+	.butttonTeam {
+		min-height: 15%;
+	}
+}

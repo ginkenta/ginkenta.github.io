@@ -22,3 +22,14 @@
 .blockWorks__footer { 
 	padding: 5% 0;
 	text-align: center; }
+
+@media screen and (min-width: 640px) and (max-width: 799px) {
+	.blockWorks__main div {
+    	flex-basis: 33.33%; 
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 900px) {
+	.blockWorks__main div {
+    	flex-basis: 25%; 
+    }
+}
