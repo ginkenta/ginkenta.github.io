@@ -23,3 +23,9 @@
     	width: 30%;
 	}
 }
+
+@media screen and (min-width: 318px) and (max-width: 640px) {
+	.blockVideo__videoContent {
+		margin: 10%;
+	}
+}

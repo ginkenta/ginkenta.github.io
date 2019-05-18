@@ -131,3 +131,44 @@
 		height: 50px;
 	}
 }
+
+@media screen and (max-width: 640px) {
+	.sliderInformation p {
+		font-size: 18px;
+	}
+	.buttonLearnMore {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 701px) {
+	.subscribeNews__form {
+        font-size: 2.8vw;	}
+    .footerContent__footer {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;	}
+	.footerContent__list li{
+		padding: 0 10px;
+	}
+	.footerContent__footer p {
+		padding-top: 20px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.footerContent__abt, .footerContent__address, .ourStudio__phone, .footerContent__contact {
+    	width: 95%;	}
+}
+@media screen and (max-width: 400px) {
+	.footerContent__footer {
+		padding-top: 25px;
+	}
+	.footerContent__list {
+        font-size: 12px;
+    }
+
+    .footerContent__footer p {
+    	font-size: 10px;
+    }
+}

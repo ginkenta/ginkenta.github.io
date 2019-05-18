@@ -63,3 +63,46 @@
 .photo3 { background-image: url(../image/3.png); }
 .photo4 { background-image: url(../image/4.png); }
 .photo5 { background-image: url(../image/5.png); }
+
+@media screen and (max-width: 775px) {
+	.blockPeoplesay__main {
+    	padding: 0;
+    }
+}
+@media screen  and (max-width: 900px) {
+	.blockPeoplesay, .blockPeoplesay .blockTeam__dimming {
+    	min-height: 500px;
+    }
+}
+@media screen  and (max-width: 600px) {
+    .blockPeoplesay, .blockPeoplesay .blockTeam__dimming {
+    	min-height: 600px;
+    }
+    .peopleSay p {
+    	font-size: 20px;
+    }
+}
+@media screen  and (max-width: 500px) {
+    .blockPeoplesay, .blockPeoplesay .blockTeam__dimming {
+    	min-height: 700px;
+    }
+}
+@media screen and (max-width: 373px) and (max-width: 480px) {
+    .blockPeoplesay, .blockPeoplesay .blockTeam__dimming {
+    	min-height: 750px;
+    }
+}
+
+@media screen  and (max-width: 480px) {
+    .blockPeoplesay__footer {
+	    max-width: 232px;
+	}
+    .peopleSay__photo {
+	    width: 33px;
+	    height: 33px;
+	    margin: 0 3px;
+	}
+	.button-sliderSay {
+	    font-size: 21px;
+	}
+}

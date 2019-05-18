@@ -69,3 +69,36 @@
 		min-height: 15%;
 	}
 }
+@media screen and (max-width: 630px) {
+	.blockTeam {
+		/*min-height: 1500px;*/
+	}
+	.personPhoto {
+		width: 100%;
+	}
+	.photoTeam {
+		width: 100%;
+	}
+	.photoTeam__person {
+		display: flex;
+	    flex-direction: column;
+	    flex-basis: 38%;
+	}
+}
+@media screen and (min-width: 424px) and (max-width: 580px) {
+	.blockTeam {
+	    min-height: 845px;
+	}
+}
+
+@media screen and (max-width: 421px) {
+	.blockTeam, .blockTeam__dimming {
+    	min-height: 1300px;
+	}
+	.photoTeam__person {
+        flex-basis: 44%;
+	}
+	.butttonTeam {
+	    min-height: 10%;
+	}
+}
