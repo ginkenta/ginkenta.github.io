@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	width: auto;
+	height: 100%;
+}
+:root {
+  --button-haw: 30px;
+}
+
+.todoList { 
+	width: 800px;
+	padding: 20px;
+	margin-right: 20px; }
+.todoList__header { 
+	padding: 20px;
+	display: flex;
+	justify-content: flex-end; }
+
+.taskText { 
+	width: 500px;
+	padding: 7px 0;
+    margin: 0 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none; }
+.addTask { 
+	width: 100px;
+	background-color: #0097f4;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	outline: none; }
+
+.todoList__main {  }
+.bgButton {
+	background-color: white;
+	height: var(--button-haw);
+	-webkit-background-size: contain;
+		 background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+}
+.blockFilter { 
+	display: flex;
+	height: var(--button-haw);
+	margin-bottom: 20px; }
+.blockFilter__date { 
+	width: 100px;
+	/*margin: 0 15px;*/
+	background-image: url(../img/upanddown.png);	 }
+.blockFilter__important { 
+	width: var(--button-haw);
+	background-image: url(../img/upanddownIMP.png);
+	-ms-background-position-x: center;
+	 background-position-x: center;
+	 margin: 0 15px; }
+.blockFilter__text { 
+	display: flex;
+	margin: 0 15px;
+	border-bottom: 1px solid gray;
+	padding: 0 15px; }
+.blockFilter__loop { 
+	width: var(--button-haw);
+	background-image: url(../img/loop.png);
+	border-bottom: 1px solid gray;
+	outline: none; }
+.blockFilter__input {
+	width: 450px;
+	border: none;
+    padding: 0 10px;
+    outline: none;	}
+.blockFilter__icon {
+	margin: 0 15px;
+	width: 100px;
+	background-image: url(../img/filterIcon.png);
+}
+
+.taskList {
+
+}
+.taskList__item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+
+}
+.taskList__data {
+	width: 78px;
+	height: 40px;
+    /*margin: 0 15px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.taskList__important {
+	width: 23px;
+	height: 40px;
+	margin: 0 15px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: white
+}
+.taskList__task {
+	display: flex;
+}
+
+.buttonImportant {
+	display: flex;
+	flex-direction: column;
+	margin-right: 5px;
+}
+.buttonImportant button{
+	background: none;
+	border: none;
+}
+.buttonImportant__up {  }
+.buttonImportant__down {  }
+
+.taskList__text {
+	width: 500px;
+	background-color: rgba(115,115,115,.2);
+	word-break: break-all;
+	padding: 10px;
+}
+
+.functionButton {
+	width: 123px;
+    display: flex;
+    justify-content: space-around;
+}
+.functionButtonCirkle{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+.functionButton__edit {
+	background-color: #3f8c3f;
+	padding: 7px;
+	outline: none;
+	border: none;
+}
+.functionButton__done {
+	background-color: #0097f4;
+	padding: 7px;
+	outline: none;
+	border: none;
+}
+.functionButton__remove { 
+	background-color: #0097f4;
+	padding: 7px;
+	outline: none;
+	border: none;
+ }
+
+ .taskList__hr {
+ 	width: 1px;
+ 	color: gray;
+ 	height: inherit;
+ }

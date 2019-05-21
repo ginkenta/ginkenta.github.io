@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="todoList">
+		<div class="todoList__header">
+			<input type="text" name="taskText" class="taskText" placeholder="Task" id="inputTask">
+			<button class="addTask" id="buttonAdd">ADD</button>
+		</div>
+		<div class="todoList__main">
+			<div class="blockFilter">
+				<button class="blockFilter__date bgButton"></button>
+				<button class="blockFilter__important bgButton"></button>
+				<div class="blockFilter__text">
+					<button class="blockFilter__loop bgButton"></button>
+					<input type="text" name="filterByText" class="blockFilter__input">
+				</div>
+				<button class="blockFilter__icon bgButton"></button>
+			</div>
+			<ul class="taskList" id="taskList">
+				<li class="taskList__item">
+					<div class="taskList__data">
+						<p class='date' id='date'></p>
+						<p class='hours' id='hours'></p>
+					</div>
+					<div class="taskList__important">1</div>
+					<div class="taskList__task">
+						<div class="buttonImportant">
+							<button class="buttonImportant__up">&#9650;</button>
+							<button class="buttonImportant__down">&#9660;</button>
+						</div>
+						<label class="taskList__text"></label>
+						<div class="functionButton">
+							<button class="functionButton__edit functionButtonCirkle">
+								<i><img src="img/pencil.png"></i>
+							</button>
+							<button class="functionButton__done functionButtonCirkle">
+								<i><img src="img/checked.png"></i>
+							</button>
+							<button class="functionButton__remove functionButtonCirkle">
+								<i><img src="img/delete.png"></i>
+							</button>
+						</div>
+					</div>
+				</li>
+				<hr class="taskList__hr">
+			</ul>
+		</div>
+	</div>
+	<div class="additionalFunction">
+		
+	</div>
+	<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>
