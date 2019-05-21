@@ -11,7 +11,7 @@ img {
 }
 
 .todoList { 
-	width: 800px;
+	width: 830px;
 	padding: 20px;
 	margin-right: 20px; }
 .todoList__header { 
@@ -20,7 +20,7 @@ img {
 	justify-content: flex-end; }
 
 .taskText { 
-	width: 500px;
+	width: 600px;
 	padding: 7px 0;
     margin: 0 10px;
     border: none;
@@ -32,7 +32,8 @@ img {
 	border: none;
 	border-radius: 5px;
 	color: white;
-	outline: none; }
+	outline: none;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.5) }
 
 .todoList__main {  }
 .bgButton {
@@ -47,7 +48,8 @@ img {
 .blockFilter { 
 	display: flex;
 	height: var(--button-haw);
-	margin-bottom: 20px; }
+	margin-bottom: 20px;
+	padding-right: 20px; }
 .blockFilter__date { 
 	width: 100px;
 	/*margin: 0 15px;*/
@@ -62,7 +64,7 @@ img {
 	display: flex;
 	margin: 0 15px;
 	border-bottom: 1px solid gray;
-	padding: 0 15px; }
+	width: 640px; }
 .blockFilter__loop { 
 	width: var(--button-haw);
 	background-image: url(../img/loop.png);
@@ -80,12 +82,24 @@ img {
 }
 
 .taskList {
-
+	max-height: 450px;
+	width: 97%;
+	overflow-y: auto;
+	/*border-right: 1px solid gray;*/
+	padding-right: 20px;
+	float: left;
+	
+}
+hr {
+	width: 0.1px;
+    /* color: gray; */
+    background-color: gray;
+	height: 450px;
 }
 .taskList__item {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-top: 10px;
 
 }
 .taskList__data {
@@ -160,8 +174,9 @@ img {
 	border: none;
  }
 
- .taskList__hr {
- 	width: 1px;
- 	color: gray;
- 	height: inherit;
- }
+#noTask {
+	color: gray;
+	text-align: center;
+	margin-top: 100px;
+
+}

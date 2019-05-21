@@ -2,6 +2,7 @@ var doc=document;
 var inputTask=doc.getElementById('inputTask');
 var buttonAdd=doc.getElementById('buttonAdd');
 var taskList=doc.getElementById('taskList');
+var pleaseAdd=doc.getElementById('noTask');
 var numImportant=1;
 
 function createNewElem(task) {
@@ -61,6 +62,7 @@ function createNewElem(task) {
 
 function addTask() {
 	if (inputTask.value) {
+		pleaseAdd.style.display='none';
 		var listItem=createNewElem(inputTask.value);
 		taskList.appendChild(listItem);
 		inputTask.value="";
