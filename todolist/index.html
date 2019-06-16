@@ -13,8 +13,9 @@
 		</div>
 		<div class="todoList__main">
 			<div class="blockFilter">
-				<button class="blockFilter__date bgButton"></button>
-				<button class="blockFilter__important bgButton"></button>
+				<input type="checkbox" id="blockFilter__checkbox">
+				<button class="blockFilter__date bgButton" id="blockFilter__date"></button>
+				<button class="blockFilter__important bgButton" id="taskImporrtant"></button>
 				<div class="blockFilter__text">
 					<button class="blockFilter__loop bgButton"></button>
 					<input type="text" name="filterByText" class="blockFilter__input">
@@ -22,14 +23,27 @@
 				<button class="blockFilter__icon bgButton"></button>
 			</div>
 			<ul class="taskList" id="taskList">
-				<h1 id='noTask'>PLEASE ADD TASK</h1>
+				<h1 id='noTask'>PLEASE ADD TASKs</h1>
 			</ul>
-			<hr>
+			<hr id="hr">
 		</div>
 	</div>
 	<div class="additionalFunction">
-		
+		<div class="additionalFunction__remove">
+			<p>Delete item?</p>
+			<div class="removeButton">
+				<button class="removeButton__no">NO</button><button class="removeButton__yes">YES</button>
+			</div>
+		</div>
+		<div class="additionalFunction__edit">
+			<p>Edit text</p>
+			<textarea placeholder="New text of todo item..."></textarea>
+			<div class="editButton">
+				<button class="editButton__cansel">CANSEL</button><button class="editButton__save">SAVE</button>
+			</div>
+		</div>
 	</div>
+	<!-- <script type="text/javascript" src="js/testwhithdate.js"></script> -->
 	<script type="text/javascript" src="js/javascript.js"></script>
 </body>
 </html>

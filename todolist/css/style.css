@@ -9,11 +9,12 @@ img {
 :root {
   --button-haw: 30px;
 }
-
+body{ display: flex;}
 .todoList { 
 	width: 830px;
 	padding: 20px;
-	margin-right: 20px; }
+	margin-right: 20px;
+}
 .todoList__header { 
 	padding: 20px;
 	display: flex;
@@ -50,6 +51,9 @@ img {
 	height: var(--button-haw);
 	margin-bottom: 20px;
 	padding-right: 20px; }
+#blockFilter__checkbox{
+	display: none;
+}
 .blockFilter__date { 
 	width: 100px;
 	/*margin: 0 15px;*/
@@ -105,11 +109,12 @@ hr {
 .taskList__data {
 	width: 78px;
 	height: 40px;
-    /*margin: 0 15px;*/
+    /*margin: 0 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;*/
+    text-align: center;
 }
 .taskList__important {
 	width: 23px;
@@ -178,5 +183,66 @@ hr {
 	color: gray;
 	text-align: center;
 	margin-top: 100px;
+}
 
+.additionalFunction{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.additionalFunction__remove{
+	width: 200px;
+	height: 100px;
+	background-color: rgba(115,115,115,.2);
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-bottom: 20px;
+}
+.additionalFunction__remove p{
+	text-align: center;
+	font-size: 20px; }
+.removeButton{
+	display: flex;
+	justify-content: space-around;
+}
+
+.additionalFunction__edit{
+	width: 300px;
+	height: 300px;
+	background-color: rgba(115,115,115,.2);
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+}
+.additionalFunction__edit textarea {
+	height: 70%;
+	width: 80%;
+	resize: none;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.editButton{
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+.editButton__cansel, .removeButton__no{
+	color: #0097f4;
+	font-size: 18px;
+	padding: 5px 15px;
+}
+.editButton__save, .removeButton__yes{
+	background-color: #0097f4;
+	font-size: 18px;
+	color: white;
+	padding: 5px 15px;
+	border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.5);
 }
