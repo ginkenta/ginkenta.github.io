@@ -2,7 +2,6 @@ var doc=document;
 var inputTask=doc.getElementById('inputTask');
 var buttonAdd=doc.getElementById('buttonAdd');
 var taskList=doc.getElementById('taskList');
-var pleaseAdd=doc.getElementById('noTask');
 
 var filterByDate = doc.getElementById('blockFilter__date');
 var counterForFilterDate=0;
@@ -71,9 +70,9 @@ function createNewElem(task) {
 	return listItem;
 }
 
-function addTask() {
+function addTask() {	
 	if (inputTask.value) {
-		pleaseAdd.style.display='none';
+		var pleaseAdd=doc.getElementById('noTask');
 		var listItem=createNewElem(inputTask.value);
 
 		taskList.prepend(listItem);
@@ -85,6 +84,7 @@ function addTask() {
 
 		console.log(arrayForSort);
 		console.dir(listItem);
+		if (arrayForSort.length) pleaseAdd.style.display='none';
 	}
 }
 
@@ -178,9 +178,38 @@ function downImportantFunc(){
 	if (liNumImportant>1) {liTextImportant.innerHTML=liNumImportant-1;}
 }
 
-function editTask(){}
+function editTask(){
+	var listItem = this.parentNode.previousElementSibling.lastChild;
+	console.dir(listItem);
+	// console.log(this);
+	var editForm = doc.querySelector('.additionalFunction__edit');
+	editForm.style.display='flex';
+	var buttonEditNo = doc.querySelector('button.editButton__cansel');
+	var buttonEditYes = doc.querySelector('button.editButton__save');
 
-function doneTask(){}
+	buttonEditNo.onclick=function(){
+		editForm.style.display='none';
+	}
+	buttonEditYes.onclick=function(){
+		var textForEdit = doc.querySelector('textarea.textEdit');
+		if (textForEdit.value) {
+			listItem.textContent = textForEdit.value;
+			textForEdit.value="";
+			editForm.style.display='none';
+		}
+	}
+}
+
+function doneTask(){
+	var buttonBg = this;
+	var listItem = this.parentNode.previousElementSibling.lastChild.parentNode;
+	var listItemPreviuosBg = listItem.style.backgroundColor;
+	// console.dir(listItem);
+	// console.log(bgButtonCheck);
+	listItem.style.backgroundColor="rgba(0, 151, 244,.3)";
+	buttonBg.style.backgroundColor="rgba(0, 151, 244,.25)";
+
+}
 
 function removeTask(){
 	var listItem = this.parentNode.parentNode.parentNode;
@@ -207,7 +236,9 @@ function removeTask(){
 			taskList.prepend(arrayForSort[i].someLi);
 		}
 		deleteForm.style.display='none';
+		if (arrayForSort.length==0) taskList.innerHTML='<h1 id="noTask">PLEASE ADD TASKs</h1>';
 	}
+
 }
 
 
