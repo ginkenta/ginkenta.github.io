@@ -3,6 +3,9 @@ var inputTask=doc.getElementById('inputTask');
 var buttonAdd=doc.getElementById('buttonAdd');
 var taskList=doc.getElementById('taskList');
 
+var buttonFilterText = doc.querySelector('button.blockFilter__loop');
+var textForSort=doc.querySelector('input.blockFilter__input');
+
 var filterByDate = doc.getElementById('blockFilter__date');
 var counterForFilterDate=0;
 var arrayForSort = [];
@@ -79,13 +82,45 @@ function addTask() {
 		inputTask.value="";
 
 		arrayForSort.push({indexOfLi:idnexArray,someLi:listItem});
-		importantEditRemove(listItem,idnexArray,arrayForSort);
+		importantEditRemove(listItem);
 		idnexArray++;
 
 		console.log(arrayForSort);
 		console.dir(listItem);
 		if (arrayForSort.length) pleaseAdd.style.display='none';
 	}
+}
+
+buttonFilterText.onclick=filterByText;
+
+function filterByText(){
+	var textValue=textForSort.value;
+	// var taskTextValue=
+	console.log(textValue);
+	// var arraySortedByText=arrayForSort.someLi.filter(function(s){
+	// 	return ~s.indexOf(textValue);
+	// });
+	// console.log(arraySortedByText);
+
+	var arrayForSort = arrayForSort.filter(function(s){
+		return s.someLi.field.value.includes('j');});
+	console.log(arrayForSort);
+
+	// for (var i = 0; i < arrayForSort.length; i++) {
+	// 	taskList.prepend(arrayForSort[i].someLi);
+	// }
+
+	// arrayForSort.sort(function(a,b){
+	// 	var textA=a.
+	// });
+}
+
+function renderList(_list=[],el=document.body){
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
 }
 
 function filterArrByDate(){
@@ -240,7 +275,6 @@ function removeTask(){
 	}
 
 }
-
 
 function importantEditRemove(listItem){
 	var liUpImportant = listItem.querySelector('button.buttonImportant__up');
