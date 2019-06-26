@@ -1,8 +1,10 @@
 var doc=document;
 var inputTask=doc.getElementById('inputTask');
+
 var buttonAdd=doc.getElementById('buttonAdd');
 var taskList=doc.getElementById('taskList');
-var pleaseAdd=doc.getElementById('noTask');
+const dimmingBlockM=doc.querySelector('div.dimmingBlock__main');
+const dimmingBlockH=doc.querySelector('div.dimmingBlock__head');
 
 var buttonFilterText = doc.querySelector('button.blockFilter__loop');
 var inputForSort=doc.querySelector('input.blockFilter__input');
@@ -23,12 +25,29 @@ var optionsForDate = {
   minute: 'numeric',
 };
 
+if (localStorage.arrayForIndex) {
+	taskList.innerHTML=localStorage.getItem('todos');
+	var listItem=doc.querySelectorAll('li');
+	for (let ii,i = 0; i< listItem.length; i++,ii=ii+2) {
+		importantEditRemove(listItem[i]);
+		arrayForSort.push({indexOfLi:JSON.parse(localStorage.arrayForIndex)[i],someLi:listItem[i]});
+	}
+	idnexArray=Number(localStorage.idnexArray);
+}
+
+var pleaseAdd=doc.getElementById('noTask');
+
+function noTaskFunc(){
+	var ammOfLi=doc.querySelectorAll('li');
+	
+}
+
 function arrayForIndexFunc(){
 	var arrayForIndex=[];
 	for (var i = arrayForSort.length - 1; i >= 0; i--) {
 		arrayForIndex.push(arrayForSort[i].indexOfLi);
 	}
-	console.log(arrayForIndex);
+	// console.log(arrayForIndex);
 	localStorage.setItem('arrayForIndex',JSON.stringify(arrayForIndex));
 }
 
@@ -36,6 +55,7 @@ function saveToLStorage(){
 	var todos=taskList.innerHTML;
 	//localStorage.setItem("arrayMain",JSON.stringify(arrayForSort[0].someLi));
 	localStorage.setItem("todos",todos);
+	// localStorage.setItem("counterForFilterDate",counterForFilterDate);
 }
 
 
@@ -94,21 +114,24 @@ function createNewElem(task) {
 function addTask() {	
 	if (inputTask.value) {
 		var listItem=createNewElem(inputTask.value);
-
+		//pleaseAdd.style.display='none';
 		taskList.prepend(listItem);
 		inputTask.value="";
 
 		arrayForSort.push({indexOfLi:idnexArray,someLi:listItem});
 		
-		
 		importantEditRemove(listItem);
 		idnexArray++;
-
+		localStorage.setItem('idnexArray',idnexArray);
 		// console.log(arrayForSort);
 		// console.dir(listItem);
 		// console.log(arrayForSort.length);
-		if (doc.querySelectorAll('li').length>0) pleaseAdd.style.display='none';
-
+		// if (doc.querySelectorAll('li').length>0) pleaseAdd.style.display='none';
+		if (arrayForSort.length>0 && pleaseAdd.style.display!=='none') {
+			pleaseAdd.style.display='none';
+		} else if(arrayForSort.length==0){
+			pleaseAdd.style.display='block';
+		}
 		arrayForIndexFunc();
 		saveToLStorage();
 	}
@@ -120,29 +143,15 @@ function filterArrByDate(){
 		if (counterForFilterDate>1) {
 			counterForFilterDate=0;
 		}
-		if (counterForFilterDate) {
-			//if click 1 time on button filter
-			arrayForSort.sort(function(a,b){
-				return a.indexOfLi - b.indexOfLi;
-			});
+		taskList.innerHTML='<h1 id="noTask" style="display:none;">PLEASE ADD TASKs</h1>';
 
-			taskList.innerHTML="";
-			for (var i = 0; i < arrayForSort.length; i++) {
-				taskList.prepend(arrayForSort[i].someLi);
-			}
-			//***********************
-		}
-		else {
-			//if click 1++ time on button filter
-			arrayForSort.sort(function(a,b){
-				return b.indexOfLi - a.indexOfLi;
-			});
+		arrayForSort.sort(function(a,b){
+			if (counterForFilterDate) return a.indexOfLi - b.indexOfLi;
+			else return b.indexOfLi - a.indexOfLi;
+		});
 
-			taskList.innerHTML="";
-			for (var i = 0; i < arrayForSort.length; i++) {
+		for (var i = 0; i < arrayForSort.length; i++) {
 				taskList.prepend(arrayForSort[i].someLi);
-			}
-			//***********************
 		}
 		counterForFilterDate++;
 		arrayForIndexFunc();
@@ -156,35 +165,22 @@ function filterArrByImportant(){
 		if (counterForFilterImportant>1) {
 			counterForFilterImportant=0;
 		}
-
-		if (counterForFilterImportant) {
-			var liItem = doc.querySelectorAll('.taskList__item');
-			arrayForSort.sort(function(a, b) {
-			// using ~~ to cast the value to a number instead of a string
-				a = Number(a.someLi.children[1].innerHTML);
-				b = Number(b.someLi.children[1].innerHTML);
-				return b - a;
-			});
-			taskList.innerHTML="";
-			for (var i = 0; i < arrayForSort.length; i++) {
-				taskList.prepend(arrayForSort[i].someLi);
-			}
-		} else {
-			var liItem = doc.querySelectorAll('.taskList__item');
-		 
-			arrayForSort.sort(function(a, b) {
-			// using ~~ to cast the value to a number instead of a string
-				a = Number(a.someLi.children[1].innerHTML);
-				b = Number(b.someLi.children[1].innerHTML);
-				return a - b;
-			});
-			taskList.innerHTML="";
-			for (var i = 0; i < arrayForSort.length; i++) {
-				taskList.prepend(arrayForSort[i].someLi);
-			}
+		var liItem = doc.querySelectorAll('.taskList__item');
+		arrayForSort.sort(function(a, b) {
+		// using ~~ to cast the value to a number instead of a string
+			a = Number(a.someLi.children[1].innerHTML);
+			b = Number(b.someLi.children[1].innerHTML);
+			
+			if (counterForFilterImportant) return b - a;
+			else return a - b;
+		});
+		taskList.innerHTML='<h1 id="noTask" style="display:none;">PLEASE ADD TASKs</h1>';
+		for (var i = 0; i < arrayForSort.length; i++) {
+			taskList.prepend(arrayForSort[i].someLi);
 		}
+
 		counterForFilterImportant++;
-		console.log(counterForFilterImportant);
+		// console.log(counterForFilterImportant);
 		arrayForIndexFunc();
 		saveToLStorage();
 	}
@@ -221,19 +217,21 @@ function editTask(){
 	var buttonEditNo = doc.querySelector('button.editButton__cansel');
 	var buttonEditYes = doc.querySelector('button.editButton__save');
 
+	dimmingBlockM.style.display='block';
+	var textForEdit = doc.querySelector('textarea.textEdit');
 	buttonEditNo.onclick=function(){
-		var textForEdit = doc.querySelector('textarea.textEdit');
 		textForEdit.value="";
 		editForm.style.display='none';
 		saveToLStorage();
+		dimmingBlockM.style.display='none';
 	}
 	buttonEditYes.onclick=function(){
-		var textForEdit = doc.querySelector('textarea.textEdit');
 		if (textForEdit.value) {
 			listItem.textContent = textForEdit.value;
 			textForEdit.value="";
 			editForm.style.display='none';
 		}
+		dimmingBlockM.style.display='none';
 		saveToLStorage();
 	}
 
@@ -251,19 +249,21 @@ function doneTask(){
 function removeTask(){
 	var listItem = this.parentNode.parentNode.parentNode;
 	var taskList = listItem.parentNode;
-	console.log(listItem);
-	console.log(this);
+	// console.log(listItem);
+	// console.log(this);
 	var deleteForm = doc.querySelector('.additionalFunction__remove');
 	deleteForm.style.display='flex';
 	var buttonDeleteNo = doc.querySelector('button.removeButton__no');
 	var buttonDeleteYes = doc.querySelector('button.removeButton__yes');
 
+	dimmingBlockM.style.display='block';
+
 	buttonDeleteNo.onclick=function(){
 		deleteForm.style.display='none';
+		dimmingBlockM.style.display='none';
 	}
 	buttonDeleteYes.onclick=function(){
-		console.log('12');
-		taskList.innerHTML='';
+		taskList.innerHTML='<h1 id="noTask" style="display:none;">PLEASE ADD TASKs</h1>';
 		for (let i = 0; i < arrayForSort.length; i++) {
 			if (arrayForSort[i].someLi === listItem) {
 				arrayForSort.splice(i,1);		
@@ -273,9 +273,11 @@ function removeTask(){
 			taskList.prepend(arrayForSort[i].someLi);
 		}
 		deleteForm.style.display='none';
-		if (arrayForSort.length==0) taskList.innerHTML='<h1 id="noTask">PLEASE ADD TASKs</h1>';
+
 		pleaseAdd=doc.getElementById('noTask');
+		if (arrayForSort.length==0) pleaseAdd.style.display='block';
 		
+		dimmingBlockM.style.display='none';
 		arrayForIndexFunc();
 		saveToLStorage();
 	}
@@ -302,37 +304,39 @@ function importantEditRemove(listItem){
 // buttonFilterText.onclick=filterByText;
 
 function filterByText(){
+	const concernsNot=doc.querySelector('div.concernsNot');
 	var input, textForSort, ul, li, txtValue;
 	textForSort=inputForSort.value.toUpperCase(); //text what we input for sort filter
+	
+	if (textForSort) {dimmingBlockH.style.display="block";} 
+	else {dimmingBlockH.style.display="none";}
+	
 	ul = doc.querySelector("#taskList");
 	li = ul.querySelectorAll('li');
+	var counterForIndex=0;
   // Loop through all list items, and hide those who don't match the search query
 	for (let i = 0; i < li.length; i++) {
 		label = li[i].querySelectorAll("label")[0];
 		txtValue = label.textContent || label.innerText;
-		if (txtValue.toUpperCase().indexOf(textForSort) > -1) {
+		var indexTxtValue=txtValue.toUpperCase().indexOf(textForSort);
+
+		if (indexTxtValue > -1) {
 			li[i].style.display = "";
-			pleaseAdd.style.display='none';
+
 		} else {
 			li[i].style.display = "none";
-			pleaseAdd.style.display='block';
-			pleaseAdd.innerHTML='CONCEPTIONS NOT FOUND';
+			counterForIndex--;
 		}
+		// console.log('indexTxtValue'+[i]+' = '+indexTxtValue);
+		// counterForIndex+=indexTxtValue;
 	}
-	console.log(li.length);
-	// if (doc.querySelectorAll('li').length>0) {
-	// 	pleaseAdd.style.display='none';
-	// } else {
-	// 	pleaseAdd.style.display='block';
-	// }
+	// console.log('counterForIndex = '+ counterForIndex);
+	if (counterForIndex*(-1)==li.length) concernsNot.style.display="block";
+	else concernsNot.style.display="none";
+	// if (counterForIndex>-1) {concernsNot.style.display="none";} else {concernsNot.style.display="block";}
+	//console.log(li.length);
 }
 
 
-if (localStorage.arrayForIndex) {
-	taskList.innerHTML=localStorage.getItem('todos');
-	var listItem=doc.querySelectorAll('li');
-	for (let ii,i = 0; i< listItem.length; i++,ii=ii+2) {
-		importantEditRemove(listItem[i]);
-		arrayForSort.push({indexOfLi:JSON.parse(localStorage.arrayForIndex)[i],someLi:listItem[i]});
-	}
-}
+
+

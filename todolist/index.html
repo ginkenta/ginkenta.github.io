@@ -10,6 +10,7 @@
 		<div class="todoList__header">
 			<input type="text" name="taskText" class="taskText" placeholder="Task" id="inputTask">
 			<button class="addTask" id="buttonAdd">ADD</button>
+			<div class="dimmingBlock__head" style="display: none;"></div>
 		</div>
 		<div class="todoList__main">
 			<div class="blockFilter">
@@ -22,8 +23,14 @@
 				<button class="blockFilter__icon bgButton"></button>
 			</div>
 			<ul class="taskList" id="taskList">
-				<h1 id='noTask'>PLEASE ADD TASKs</h1>
+				<h1 id='noTask' style="display: block;">PLEASE ADD TASKs</h1>
 			</ul>
+			<div class="concernsNot" style="display: none;">
+				<p class="concernsNot__text">
+					CONCERNS NOT FOUND
+				</p>
+			</div>
+			<div class="dimmingBlock__main" style="display: none;"></div>
 			<hr id="hr">
 		</div>
 	</div>
