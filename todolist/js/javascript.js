@@ -304,37 +304,39 @@ function importantEditRemove(listItem){
 // buttonFilterText.onclick=filterByText;
 
 function filterByText(){
-	const concernsNot=doc.querySelector('div.concernsNot');
-	var input, textForSort, ul, li, txtValue;
-	textForSort=inputForSort.value.toUpperCase(); //text what we input for sort filter
-	
-	if (textForSort) {dimmingBlockH.style.display="block";} 
-	else {dimmingBlockH.style.display="none";}
-	
-	ul = doc.querySelector("#taskList");
-	li = ul.querySelectorAll('li');
-	var counterForIndex=0;
-  // Loop through all list items, and hide those who don't match the search query
-	for (let i = 0; i < li.length; i++) {
-		label = li[i].querySelectorAll("label")[0];
-		txtValue = label.textContent || label.innerText;
-		var indexTxtValue=txtValue.toUpperCase().indexOf(textForSort);
+	if (arrayForSort.length > 0) {
+		const concernsNot=doc.querySelector('div.concernsNot');
+		var input, textForSort, ul, li, txtValue;
+		textForSort=inputForSort.value.toUpperCase(); //text what we input for sort filter
 
-		if (indexTxtValue > -1) {
-			li[i].style.display = "";
+		if (textForSort) {dimmingBlockH.style.display="block";} 
+		else {dimmingBlockH.style.display="none";}
 
-		} else {
-			li[i].style.display = "none";
-			counterForIndex--;
+		ul = doc.querySelector("#taskList");
+		li = ul.querySelectorAll('li');
+		var counterForIndex=0;
+	  // Loop through all list items, and hide those who don't match the search query
+		for (let i = 0; i < li.length; i++) {
+			label = li[i].querySelectorAll("label")[0];
+			txtValue = label.textContent || label.innerText;
+			var indexTxtValue=txtValue.toUpperCase().indexOf(textForSort);
+
+			if (indexTxtValue > -1) {
+				li[i].style.display = "";
+
+			} else {
+				li[i].style.display = "none";
+				counterForIndex--;
+			}
+			// console.log('indexTxtValue'+[i]+' = '+indexTxtValue);
+			// counterForIndex+=indexTxtValue;
 		}
-		// console.log('indexTxtValue'+[i]+' = '+indexTxtValue);
-		// counterForIndex+=indexTxtValue;
+		// console.log('counterForIndex = '+ counterForIndex);
+		if (counterForIndex*(-1)==li.length) concernsNot.style.display="block";
+		else concernsNot.style.display="none";
+		// if (counterForIndex>-1) {concernsNot.style.display="none";} else {concernsNot.style.display="block";}
+		//console.log(li.length);
 	}
-	// console.log('counterForIndex = '+ counterForIndex);
-	if (counterForIndex*(-1)==li.length) concernsNot.style.display="block";
-	else concernsNot.style.display="none";
-	// if (counterForIndex>-1) {concernsNot.style.display="none";} else {concernsNot.style.display="block";}
-	//console.log(li.length);
 }
 
 
