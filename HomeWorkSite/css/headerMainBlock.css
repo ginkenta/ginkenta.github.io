@@ -119,6 +119,7 @@ h1 {
 
 .sliderPoint__cirkle:hover {
   flex-grow: 0.01;
+  transition: .2s;
 }
 
 @media screen and (max-width: 865px) {
