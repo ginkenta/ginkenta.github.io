@@ -21,14 +21,19 @@ window.onload = function() {
     moveSlide();
   };
 
-  function moveSlide() {
-    (slideNow > 3) ? slideNow = 0:
-    (slideNow < 0) ? slideNow = 3 : slideNow;
-    sliderMove.style.left = "-" + slideNow * 100 + '%';
-    blueDot();
+  function blueDot() {
+     for(let r = 0; r < arrayOfDot.length; r++){
+       arrayOfDot[r].classList.remove("sliderPoint-blue");
+     }
+     arrayOfDot[slideNow].classList.add("sliderPoint-blue");
   }
 
-  function blueDot() {
-    arrayOfDot[slideNow].classList.toggle("sliderPoint-blue");
+  function moveSlideWithDot(){
+    for(let r=0; r<arrayOfDot.length; r++){
+      arrayOfDot[r].onclick = () => {
+        slideNow = r;
+        moveSlide();
+      }
+    }
   }
 };
