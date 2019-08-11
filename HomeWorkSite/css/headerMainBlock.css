@@ -98,8 +98,16 @@ h1 {
 	font-size: 30px;
 	color: cyan;
 	opacity: .5;
-	cursor: pointer;}
+	cursor: pointer;	
+	position: absolute;
+	top: 50%;}
 
+#sliderButton__Left{
+	left:15%;
+}
+#sliderButton__Right{
+	left:82%;
+}
 .sliderButton, .sliderPoint{
 	display: flex;
 	justify-content: center;
