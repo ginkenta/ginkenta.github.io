@@ -10,7 +10,7 @@
 
 #menu-checkbox { display: none; }
 
-.logo{ 
+.logo{
 	display: flex;
 	align-items: center; }
 .logo__img{
@@ -25,7 +25,7 @@
 	flex-direction: column;
 	justify-content: center; }
 
-.headerNavigator{ 
+.headerNavigator{
 	display: flex;
 	flex-direction: column;
 	justify-content: center; }
@@ -48,13 +48,13 @@
 	overflow: hidden; }
 
 .headerSlider {
-	width: 400%; 
+	width: 400%;
 	display: flex;
 	position: relative;
 	left: 0;
 	transition-duration: .5s; }
 
-.sliderInformation{ 
+.sliderInformation{
 	max-width: 800px;
 	min-height: 240px;
 	text-align: center;
@@ -75,7 +75,7 @@ h1 {
 	color: white;
 	margin: 0 auto; }
 
-.sliderInformation__text{ 
+.sliderInformation__text{
 	padding: 6% 5px;
 	color: white; }
 .sliderInformation::last-child{margin: 0 auto;}
@@ -100,11 +100,11 @@ h1 {
 	opacity: .5;
 	cursor: pointer;}
 
-.sliderButton, .sliderPoint{ 
+.sliderButton, .sliderPoint{
 	display: flex;
 	justify-content: center;
 	align-items: center; }
-.sliderPoint { 
+.sliderPoint {
 	margin: 0 20px;
 	opacity: .6; }
 .sliderPoint::first-child{background-color: 'cyan';}
@@ -116,7 +116,7 @@ h1 {
 	border: .5px solid cyan; }
 
 @media screen and (max-width: 865px) {
-	.logo{ 
+	.logo{
 		display: block;
 		position: relative; }
 	.headerNavigator {
@@ -147,16 +147,19 @@ h1 {
 		text-align: center;
 	}
 	.headerNavigator__miniMenu:after {
-		content: attr(data-open); 
+		content: attr(data-open);
 		display: block;
 	}
 	#menu-checkbox:checked + nav[role="navigation"] .headerNavigator__list {
 		display: block;
 	}
 }
-
-@media screen and (max-width: 990px) {
-	.sliderInformation{ 
-		padding: 2% 2%; }
+.sliderPoint-blue{
+	backgroundColor = 'cyan';
 }
 
+
+@media screen and (max-width: 990px) {
+	.sliderInformation{
+		padding: 2% 2%; }
+}
