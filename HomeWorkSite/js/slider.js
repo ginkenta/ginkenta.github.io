@@ -22,6 +22,13 @@ window.onload = function() {
     moveSlide();
   };
 
+  function moveSlide() {
+    (slideNow > 3) ? slideNow = 0:
+    (slideNow < 0) ? slideNow = 3 : slideNow;
+    sliderMove.style.left = "-" + slideNow * 100 + '%';
+    blueDot();
+  }
+  
   function blueDot() {
      for(let r = 0; r < arrayOfDot.length; r++){
        arrayOfDot[r].classList.remove("sliderPoint-blue");
