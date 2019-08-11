@@ -11,17 +11,19 @@ window.onload = function() {
 
 
   slideMoveRight.onclick = () => {
+    blueDot()
     slideNow++;
     moveSlide();
   };
   slideMoveLeft.onclick = () => {
+    blueDot()
     slideNow--;
     moveSlide();
   };
 
   function moveSlide() {
     (slideNow > 3) ? slideNow = 0:
-      (slideNow < 0) ? slideNow = 3 : slideNow;
+    (slideNow < 0) ? slideNow = 3 : slideNow;
     sliderMove.style.left = "-" + slideNow * 100 + '%';
     blueDot();
   }
