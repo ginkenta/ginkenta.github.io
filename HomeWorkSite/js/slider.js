@@ -8,6 +8,7 @@ window.onload = function() {
   let arrayOfDot = doc.getElementsByClassName("sliderPoint__cirkle");
   let slideNow = 0;
   blueDot();
+  moveSlideWithDot();
 
 
   slideMoveRight.onclick = () => {
