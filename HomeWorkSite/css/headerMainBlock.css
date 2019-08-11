@@ -143,7 +143,7 @@ h1 {
 		display: none;
 		position: absolute;
 		top: 65%;
-		left: 0;
+		left: -78%;
 		text-align:center;
 		width: 100%;
 	}
@@ -167,6 +167,8 @@ h1 {
 	}
 	#menu-checkbox:checked + nav[role="navigation"] .headerNavigator__list {
 		display: block;
+		background-color: rgba(0,0,0,.2);
+    		padding: 2px 10px 10px;
 	}
 }
 .sliderPoint-blue{
