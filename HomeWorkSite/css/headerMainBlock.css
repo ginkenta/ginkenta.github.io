@@ -106,15 +106,20 @@ h1 {
 	align-items: center; }
 .sliderPoint {
 	margin: 0 20px;
-	opacity: .6; }
+	opacity: .6;
+  flex-grow: 2; }
 .sliderPoint::first-child{background-color: 'cyan';}
 .sliderPoint__cirkle {
 	width: 10px;
 	height: 10px;
 	margin: 3px;
 	border-radius: 50%;
-	border: 1px solid cyan;
-	cursor: pointer;}
+	border: 2px solid cyan;
+   }
+
+.sliderPoint__cirkle:hover {
+  flex-grow: 0.01;
+}
 
 @media screen and (max-width: 865px) {
 	.logo{
