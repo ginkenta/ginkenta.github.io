@@ -52,7 +52,8 @@
 	display: flex;
 	position: relative;
 	left: 0;
-	transition-duration: .5s; }
+	transition-duration: 1s;
+	pointer: grab;}
 
 .sliderInformation{
 	max-width: 800px;
