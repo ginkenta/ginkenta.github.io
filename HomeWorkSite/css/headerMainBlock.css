@@ -53,7 +53,7 @@
 	position: relative;
 	left: 0;
 	transition-duration: 1s;
-	pointer: grab;
+	cursor: grab;
 	user-select: none;}
 
 .sliderInformation{
