@@ -53,7 +53,8 @@
 	position: relative;
 	left: 0;
 	transition-duration: 1s;
-	pointer: grab;}
+	pointer: grab;
+	user-select: none;}
 
 .sliderInformation{
 	max-width: 800px;
@@ -63,23 +64,45 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	word-wrap: wrap; }
+	word-wrap: wrap;
+	z-index: 1;
+}
 
 h1 {
 	padding-bottom: 20px;
 	font-size: 30pt;
 	font-family: serif;
-	color: white; }
+	color: white;
+	z-index: 1;
+ }
 
 .titleDownline {
 	width: 50px;
 	color: white;
-	margin: 0 auto; }
+	margin: 0 auto;
+	z-index: 1;
+ }
 
 .sliderInformation__text{
 	padding: 6% 5px;
-	color: white; }
-.sliderInformation::last-child{margin: 0 auto;}
+	color: white;
+	z-index: 1;
+ }
+.sliderInformation:last-child{margin: 0 auto;}
+
+.boxShadow{
+	width: 2px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	z-index: 0;
+	transition: 1s;
+}
+.headerSlider:hover + .boxShadow{
+	box-shadow: 0 0 100px 240px rgba(48, 20, 71, 0.8);
+}
 
 .buttonLearnMore {
 	padding: 10px;
@@ -89,7 +112,9 @@ h1 {
 	font-family: sans-serif;
 	font-weight: bold;
 	font-size: 12px;
-	display: inline-flex; }
+	display: inline-flex;
+	z-index: 1;
+ }
 
 .headerContent__footer{  }
 
@@ -99,9 +124,11 @@ h1 {
 	font-size: 30px;
 	color: cyan;
 	opacity: .5;
-	cursor: pointer;	
+	cursor: pointer;
 	position: absolute;
-	top: 50%;}
+	top: 45%;
+	z-index: 1;
+}
 
 #sliderButton__Left{
 	left:15%;
