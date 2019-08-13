@@ -24,24 +24,41 @@ window.onload = function() {
 
   function moveSlide() {
     (slideNow > 3) ? slideNow = 0:
-    (slideNow < 0) ? slideNow = 3 : slideNow;
+      (slideNow < 0) ? slideNow = 3 : slideNow;
     sliderMove.style.left = "-" + slideNow * 100 + '%';
     blueDot();
   }
-  
+
   function blueDot() {
-     for(let r = 0; r < arrayOfDot.length; r++){
-       arrayOfDot[r].classList.remove("sliderPoint-blue");
-     }
-     arrayOfDot[slideNow].classList.add("sliderPoint-blue");
+    for (let r = 0; r < arrayOfDot.length; r++) {
+      arrayOfDot[r].classList.remove("sliderPoint-blue");
+    }
+    arrayOfDot[slideNow].classList.add("sliderPoint-blue");
   }
 
-  function moveSlideWithDot(){
-    for(let r=0; r<arrayOfDot.length; r++){
+  function moveSlideWithDot() {
+    for (let r = 0; r < arrayOfDot.length; r++) {
       arrayOfDot[r].onclick = () => {
         slideNow = r;
         moveSlide();
       }
     }
   }
+
+  // Function for swiping slider
+  function mouseClickDownFunc(eventDown) {
+    let oldPosX = eventDown.pageX;
+    sliderMove.onmouseup = function(eventUp) {
+      let newPosX = eventUp.pageX;
+      let moveSlideSwipe = newPosX - oldPosX;
+      (moveSlideSwipe < -20) ? slideNow++ :
+      (moveSlideSwipe > 20) ? slideNow-- : false;
+      moveSlide();
+      console.log('new position: ' + newPosX);
+      console.log(newPosX - oldPosX);
+    }
+    console.log('old position' + oldPosX);
+  }
+  sliderMove.addEventListener('mousedown', mouseClickDownFunc);
+
 };
