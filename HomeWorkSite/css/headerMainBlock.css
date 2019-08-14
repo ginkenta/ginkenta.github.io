@@ -95,7 +95,7 @@ h1 {
 	height: 1px;
 	background: none;
 	position: absolute;
-	top: 42%;
+	top: 40%;
 	left: 50%;
 	z-index: 0;
 	transition: 1s;
@@ -206,5 +206,6 @@ h1 {
 
 @media screen and (max-width: 990px) {
 	.sliderInformation{
-		padding: 2% 2%; }
+		padding: 2% 2%; 
+	}
 }
