@@ -1,6 +1,8 @@
 .headerMainBlock{
 	min-height: 627px;
-	background-image:url(../image/header.png); }
+	background-image:url(../image/header.png);
+	position: relative;
+}
 
 .headerContent{ padding-bottom: 80px;  }
 .headerContent__head{
@@ -95,7 +97,7 @@ h1 {
 	height: 1px;
 	background: none;
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	left: 50%;
 	z-index: 0;
 	transition: 1s;
@@ -131,10 +133,10 @@ h1 {
 }
 
 #sliderButton__Left{
-	left:15%;
+	left:12%;
 }
 #sliderButton__Right{
-	left:82%;
+	left:84%;
 }
 .sliderButton, .sliderPoint{
 	display: flex;
