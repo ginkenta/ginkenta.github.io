@@ -9,14 +9,14 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 15px 5%;
-	z-index: 1;
 }
 
 #menu-checkbox { display: none; }
 
 .logo{
 	display: flex;
-	align-items: center; }
+	align-items: center;
+	z-index: 1;}
 .logo__img{
 	width: 45px;
 	height: 50px;
@@ -32,7 +32,8 @@
 .headerNavigator{
 	display: flex;
 	flex-direction: column;
-	justify-content: center; }
+	justify-content: center;
+	z-index: 1;}
 .headerNavigator__list{
 	display: flex;
 	list-style: none;}
